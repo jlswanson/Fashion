@@ -1,0 +1,15 @@
+body {
+	background-color: #222;
+}
+img {
+	max-width: 100%;
+}
+.background-white {
+	background: #fff;
+}
+.font-white {
+	color: #fff;
+}
+.rotate-90 {
+	transform: rotate(-90deg);
+}
