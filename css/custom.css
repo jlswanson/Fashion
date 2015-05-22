@@ -1,5 +1,10 @@
 body {
 	background-color: #222;
+	color: #ddd;
+	font-family: 'Josefin Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display SC', serif;
 }
 img {
 	max-width: 100%;
@@ -7,9 +12,29 @@ img {
 .background-white {
 	background: #fff;
 }
+.color-accent {
+	color: #E10084;
+}
+.fashion-photography {
+	left: -50px;
+}
+.fixed-text-center {
+	position: fixed;
+	top: 50%;
+}
 .font-white {
 	color: #fff;
 }
+.photo-section img {
+	margin-bottom: 20px;
+}
+.quote {
+	font-style: italic;
+}
 .rotate-90 {
 	transform: rotate(-90deg);
+}
+.text-block-center {
+	position: relative;
+	top: 230px;
 }
