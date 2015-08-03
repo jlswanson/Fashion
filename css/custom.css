@@ -11,17 +11,80 @@ a:visited, a:hover, a:active {
 	color: #AD0059;
 	text-decoration: none;
 }
+form {
+	border: 1px dashed #E10084;
+	margin: 20px 0 0;
+	padding: 0 7px;
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Playfair Display SC', serif;
 }
 img {
 	max-width: 100%;
 }
+input,textarea {
+	background-color: #444;
+	border: 1px solid #555;
+	color: #fff;
+	display: block;
+	margin: 7px 0;
+	padding: 3px 5px;
+	width: 100%;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
 .background-white {
 	background: #fff;
 }
 .color-accent {
 	color: #E10084;
+}
+.contact {
+	border-top: 1px solid #2F2F2F;
+	margin: 20px 0;
+	padding-top: 20px;
+	text-align: center;
+}
+.contact a {
+	background-color: #E10084;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Playfair Display SC', serif;
+	padding: 5px 30px;
+	text-transform: uppercase;
+}
+.contact a:hover {
+	background-color: #AD0059;
+	color: #fff;
+}
+#contact-form {
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: max-height 1.2s;
+	-o-transition: max-height 1.2s;
+	transition: max-height 1.2s;
+}
+#contact-form button {
+	background-color: #E10084;
+	border: none;
+	color: #fff;
+	font-family: 'Playfair Display SC', serif;
+	margin-bottom: 7px;
+	padding: 5px 30px;
+	text-transform: uppercase;
+	transition: all .2s;
+}
+#contact-form button:hover {
+	background-color: #AD0059;
+}
+#contact-form.revealed {
+	max-height: 300px;
 }
 .fashion-photography {
 	left: -50px;
@@ -36,6 +99,9 @@ img {
 .link-divide {
 	border-top: 1px solid #2F2F2F;
 }
+.link-section a {
+	margin: 0 30px;
+}
 .photo-section img {
 	margin-bottom: 20px;
 }
@@ -44,6 +110,21 @@ img {
 }
 .rotate-90 {
 	transform: rotate(-90deg);
+}
+.social-media {
+	margin: 20px 0 0;
+	text-align: center;
+}
+.social-media a {
+	display: inline-block;
+	margin: 0 5px;
+	overflow: hidden;
+}
+.social-media a:hover {
+	transform: translateY(-.3em);
+}
+.social-media img {
+	margin: 0;
 }
 .text-block-center {
 	position: relative;

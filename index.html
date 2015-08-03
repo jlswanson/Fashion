@@ -11,7 +11,9 @@
 <body>
 	<div class="container-fluid">
 		<div class="col-md-2">
-			<h2 class="font-white rotate-90 fixed-text-center fashion-photography"><span class="color-accent">Fashion</span>Photography</h2>
+			<div id="sticky-column">
+				<h2 class="font-white rotate-90 fixed-text-center fashion-photography"><span class="color-accent">Fashion</span>Photography</h2>
+			</div>
 		</div>
 		<div class="col-md-10">
 			<div class="row photo-section" id="section1">
@@ -42,7 +44,7 @@
 						<p>Nullam quis purus a risus egestas porta. Duis ut orci vel risus auctor sagittis id nec mi. Fusce molestie ultricies justo, non volutpat lacus dapibus ac. Integer tortor lectus, pretium nec varius quis, porttitor in felis. Quisque placerat tristique tellus non consequat.</p>
 						<hr class="link-divide">
 						<div class="link-section">
-							<a href="#section3">&middot; Next &middot;</a>
+							<a href="#section3" class="left">&middot; Next &middot;</a><a href="#section1" class="right">&middot; Back to Top &middot;</a>
 						</div>
 					</div>
 				</div>
@@ -59,7 +61,7 @@
 						<p>Morbi auctor mattis nisi, eget facilisis urna condimentum at. Nullam et lectus ornare dui ultrices aliquam sit amet sit amet justo. Nunc rhoncus eleifend libero at rutrum. Donec semper ut quam in molestie. Nulla vitae purus a.</p>
 						<hr class="link-divide">
 						<div class="link-section">
-							<a href="#section4">&middot; Next &middot;</a>
+							<a href="#section4" class="left">&middot; Next &middot;</a><a href="#section1" class="right">&middot; Back to Top &middot;</a>
 						</div>
 					</div>
 				</div>
@@ -74,22 +76,76 @@
 						<h4 class="quote text-left">"Elegance is not standing out, but being remembered."</h4>
 						<h6 class="quote text-right">-Giorgio Armani</h6>
 						<p>Vivamus semper, sem efficitur dignissim tincidunt, tortor mauris rhoncus odio, at iaculis magna dolor nec velit. Cras bibendum tincidunt sapien, non malesuada dui ullamcorper viverra. Mauris leo eros, elementum at condimentum nec, vulputate at odio. Fusce lacinia pretium interdum.</p>
+						<hr class="link-divide">
+						<div class="link-section">
+							<a href="#photographer" class="left">&middot; Next &middot;</a><a href="#section1" class="right">&middot; Back to Top &middot;</a>
+						</div>
 					</div>
 				</div>
-			</div> <!-- /section3 -->
+			</div> <!-- /section4 -->
+
+			<div class="row photo-section" id="photographer">
+				<div class="col-md-7 background-white">
+					<img src="img/photographer.jpg" alt="photographer">
+				</div>
+				<div class="col-md-5">
+					<div class="text-center text-block-center">
+						<h4 class="quote">About the Photographer</h4>
+						<p>Phasellus nisl orci, imperdiet non mauris ac, consequat lobortis nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc aliquam lacus.</p>
+						<div class="contact">
+							<a href="#" id="form-trigger">Contact</a>
+							<div id="contact-form">
+								<form>
+									<input type="text" placeholder="Name">
+									<input type="email" placeholder="Email Address">
+									<input type="tel" placeholder="Phone Number">
+									<textarea placeholder="Any Additional Information"></textarea>
+									<button>Submit</button>
+								</form>
+							</div>
+						</div>
+						<div class="social-media">
+							<a href="#"><img src="img/facebook.png" alt="Facebook icon" title="Like Us on Facebook"></a>
+							<a href="#"><img src="img/twitter.png" alt="Twitter icon" title="Follow Us on Twitter"></a>
+							<a href="#"><img src="img/pinterest.png" alt="Pinterest icon" title="Follow Us on Pinterest"></a>
+							<a href="#"><img src="img/instagram.png" alt="Instagram icon" title="Like Us on Instagram"></a>
+							<a href="#"><img src="img/snapchat.png" alt="Snapchat icon" title="Follow Us on Snapchat"></a>
+						</div>
+						<hr class="link-divide">
+						<div class="link-section">
+							<a href="#section1">&middot; Back to Top &middot;</a>
+						</div>
+					</div>
+				</div>
+			</div> <!-- /section4 -->
 		</div>
-	</div>
+	</div> <!-- /container-fluid -->
 
 	<!-- Javascript -->
-	<script src="js/bootstrap.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script src="js/jquery.smooth-scroll.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
-
+	
+	<!-- Smooth scrolling of Next & Back to Top links -->
 	<script>
 		$('.link-section a').smoothScroll({
 			speed: 1200,
 			easing: 'easeInOutQuart'
+		});
+	</script>
+
+	<!-- Reveal contact form -->
+	<script>
+		$('#form-trigger').click(function() {
+
+			if ( $('#contact-form').hasClass('revealed') ){
+				$('#contact-form').removeClass('revealed');
+			} else {
+				$('#contact-form').addClass ('revealed');
+			}
+
+				return false;
 		});
 	</script>
 </body>
