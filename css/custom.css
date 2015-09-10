@@ -99,8 +99,11 @@ input,textarea {
 .link-divide {
 	border-top: 1px solid #2F2F2F;
 }
-.link-section a {
-	margin: 0 30px;
+.link-section {
+	display: none;
+}
+.link-section a{
+	display: block;
 }
 .photo-section img {
 	margin-bottom: 20px;
@@ -110,6 +113,9 @@ input,textarea {
 }
 .rotate-90 {
 	transform: rotate(-90deg);
+}
+.show-on-sm-up {
+	display: none;
 }
 .social-media {
 	margin: 20px 0 0;
@@ -126,7 +132,23 @@ input,textarea {
 .social-media img {
 	margin: 0;
 }
-.text-block-center {
-	position: relative;
-	top: 230px;
+
+@media (min-width: 768px) {
+	.link-section {
+		display: block;
+	}
+	.show-on-sm-up {
+		display: block;
+	}
+	.text-block-center {
+		position: relative;
+		top: 230px;
+	}
+}
+@media (min-width: 992px) {	
+	.link-section a {
+		display: inline;
+		float: none;
+		margin: 0 30px;
+	}
 }
